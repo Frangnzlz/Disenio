@@ -1,0 +1,22 @@
+.form table tr td img{
+    height: 15px;
+
+}
+.form table tr th:first-child, .form table tr th:first-child{
+    width: 50px;
+
+}
+.form table{
+    text-align: center;
+}
+
+.form table tr:nth-child(odd){
+    background-color: grey;
+}
+.form table tr:nth-child(even){
+    background-color: greenyellow;
+}
+
+.butones button {
+    background-color: green;
+}
