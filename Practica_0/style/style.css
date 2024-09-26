@@ -1,0 +1,67 @@
+html {
+    margin: 0px;
+    padding: 0px;
+    background-color: rgba(2, 0, 36, 1);
+    color: white;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+nav a,
+nav a:visited {
+    
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(15, 38, 68, 1) 21%, rgba(30, 80, 103, 1) 44%, rgba(46, 127, 143, 1) 70%, rgba(65, 182, 189, 1) 100%);
+    text-decoration: none;
+    margin: auto;
+    padding-top: 10px;
+    color: white;
+    width: 10rem;
+    height: 2rem;
+    text-align: center;
+}
+
+nav a:hover {
+    background: linear-gradient(0deg, rgba(2, 0, 36, 1) 0%, rgba(15, 38, 68, 1) 21%, rgba(30, 80, 103, 1) 44%, rgba(46, 127, 143, 1) 70%, rgba(65, 182, 189, 1) 100%);
+}
+
+main section {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+main section h2{
+    color: rgb(65, 182, 189, 1);
+}
+
+main section .text p::first-letter {
+    font-size: 1.3em;
+}
+
+.text {
+    display: flexbox;
+    font-size: 15pt;
+    width: 250px;
+    margin: auto;
+}
+.text img{
+    display: none;
+}
+.text ul li:hover img{
+    display: inline;
+    width: 250px;
+    height: 250px;
+}
+
+.text a{
+   color : rgba(65, 182, 189, 1);
+   text-decoration: none;
+}
+.text a:visited{
+    color:rgba(30, 80, 103, 1);
+}
