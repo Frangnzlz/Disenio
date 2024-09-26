@@ -49,7 +49,7 @@ main section .text p::first-letter {
     width: 250px;
     margin: auto;
 }
-.text img{
+.text ul li img{
     display: none;
 }
 .text ul li:hover img{
@@ -64,4 +64,9 @@ main section .text p::first-letter {
 }
 .text a:visited{
     color:rgba(30, 80, 103, 1);
+}
+.text img{
+    width: 120px;
+    height: 100px;
+
 }
