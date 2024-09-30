@@ -1,22 +1,35 @@
-.form table tr td img{
-    height: 15px;
+.form table tr td img {
+  height: 15px;
+}
+.form table tr th:first-child,
+.form table tr th:first-child {
+  width: 50px;
+}
+.form table {
+  text-align: center;
+}
 
+.form table tr:nth-child(odd) {
+  background-color: grey;
 }
-.form table tr th:first-child, .form table tr th:first-child{
-    width: 50px;
-
-}
-.form table{
-    text-align: center;
-}
-
-.form table tr:nth-child(odd){
-    background-color: grey;
-}
-.form table tr:nth-child(even){
-    background-color: greenyellow;
+.form table tr:nth-child(even) {
+  background-color: greenyellow;
 }
 
 .butones button {
-    background-color: green;
+  background-color: green;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+}
+
+header {
+  width: 100%;
+  height: 10%;
+}
+header img {
+  width: 100%;
+  height: 100px;
 }
