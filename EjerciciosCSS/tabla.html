@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tabla</title>
+
+    <style>
+
+        table{
+            width: 100%;
+            border: 1px solid #000;
+            text-align: left;
+            border-collapse:collapse;
+            /* caption-side: bottom; */
+            /* background: #000 url(assets/v960-ning-30.jpg) bottom left repeat-x; */
+
+        }
+/*         
+        tr:nth-child(odd){
+            background-color: aliceblue;
+        }
+        tr:nth-child(even){
+            background-color: pink;
+        } */
+
+        /* th,td{
+            width: 25%;
+            text-align: left;
+            vertical-align: top;
+            padding: 0.3em;
+            border-bottom: 1px #000 solid;
+        } */
+        caption, td, th{
+            padding: 0.3em;
+            /* color: #fff; */
+            /* background-color: #000; */
+        }
+        /* caption{
+            font-weight: bold;
+            font-style: italic;
+        } */
+        /* th{
+            background: #eee;
+        } */
+         tbody{
+            border-top: 1px solid #000;
+            border-bottom: 1px solid #000;
+
+        }
+         tbody th, tfoot th{
+            border: 0;
+         }
+         th.name{
+            width: 25%;
+        }
+         th.location{
+            width: 20%;
+         }
+         th.lasteruption{
+            width: 30%;
+         }
+
+         th.eruptiontype{
+            width: 25%;
+         }
+         tfoot{
+            text-align: center;
+            color:#555;
+            font-size: 0.8em;
+         }
+    </style>
+</head>
+<body>
+    <table>
+        <caption>Listado de Volcanes</caption>
+        <thead>
+            <tr>
+                <th class="name" scope="col">Nombre</th>
+                <th class="location" scope="col">Localizacion</th>
+                <th class="lasteruption" scope="col">Año explosión</th>
+                <th class="eruptiontype" scope="col">Tipo de explosión</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <th scope="row">Lassen</th>
+                <td>California</td>
+                <td>1914-17</td>
+                <td>Tipo 1</td>
+            </tr>
+            <tr>
+                <th scope="row">Hood</th>
+                <td>Oregon</td>
+                <td>1790s</td>
+                <td>Tipo 2</td>
+            </tr>
+            <tr>
+                <th scope="row">Helens</th>
+                <td>Washington</td>
+                <td>1980</td>
+                <td>Tipo 3</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr><td colspan="4">&copy;Recpilación 2024</td></tr>
+        </tfoot>
+        
+    </table>
+</body>
+</html>

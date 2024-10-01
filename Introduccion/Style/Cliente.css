@@ -1,8 +1,12 @@
+nav a{
+  color:blue;
+  text-decoration: none;
+}
 .form table tr td img {
   height: 15px;
 }
 .form table tr th:first-child,
-.form table tr th:first-child {
+.form table tr td:first-child {
   width: 50px;
 }
 .form table {
