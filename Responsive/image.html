@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Ejemplo 1</h1>
+<img srcset="image/small.jpg, image/medium.jpg x2, image/big.jpg x3"
+src="image/big.jpg"
+alt="Imagen">
+
+    <h1>Ejemplo 2</h1>
+    <picture>
+        <source media="(max-width:799px )" srcset="image/small.jpg">
+        <source media="(min-width:800px )" srcset="image/big.jpg">
+        <img src="image/big.jpg" alt="Imagen 2">
+    </picture>
+</body>
+</html>

@@ -1,0 +1,24 @@
+button:hover > img{
+
+        content: url("../imagenes/img_AmpliarInfo_alt.png");
+}
+button + button:hover > img{
+        content: url("../imagenes/img_modificar_alt.png");
+    
+}
+
+table{
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+}
+table tr th input, table tr th select{
+    width: 100%;
+}
+
+table tr:nth-child(odd){
+    background-color:rgba(119, 178, 140, 0.4);
+}
+table tr:nth-child(even){
+    background-color:rgba(119, 178, 140, 0.2);
+}
