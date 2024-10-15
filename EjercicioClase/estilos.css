@@ -1,0 +1,23 @@
+body{
+    background: #2a2a2a;
+    color: aliceblue;
+    font-size: 15px;
+}
+h1{
+    font-size: 3rem;
+    text-decoration: underline overline;
+}
+
+a{
+    text-decoration: none;
+    color: aliceblue;
+}
+a:visited{
+    text-decoration: line-through;
+    color: aquamarine
+}
+
+a:hover{
+    text-decoration: underline;
+    color: aqua;
+}

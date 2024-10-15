@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .capa1{
+            border:dashed;
+            position: relative;
+            height: 8em;
+            margin-bottom:1em;
+            margin-top: 2em;
+            z-index: 1;
+        }
+        .capa2{
+            background: gold;
+            width: 200px;
+            height: 100px;
+            left: 60px;
+            position: absolute;
+            top: 3em;
+            z-index: 5;
+        }
+        .capa3{
+            background: lightgreen;
+            width: 200px;
+            height: 7em;
+            left: 20em;
+            opacity: 0.9;
+            position: absolute;
+            top: -25px;
+            z-index: 3;
+        }
+        .capa4{
+            background: lightblue;
+            width: 200px;
+            height: 7em;
+            opacity: 0.2;
+            position: absolute;
+            left: 160px;
+            top: 1em;
+            z-index: 4;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="capa1">
+        capa1
+        <span class="capa2">capa2</span>
+        <span class="capa3">capa3</span>
+        <span class="capa4">capa4</span>
+    </div>
+</body>
+</html>
