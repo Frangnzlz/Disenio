@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grid{
+            display: grid;
+            /* grid-template-columns: auto 100px 33%; */
+            grid-template-columns: repeat(3,1fr);
+            /* grid-template-rows: 300px 100px; */
+            gap: 1em;
+            /* column-gap: 10em; */
+            /* row-gap: 1em; */
+            grid-auto-rows: minmax(100px, auto);
+            justify-items: stretch;
+        }
+        .grid div{
+            background-color: #ecf0f1;
+            padding: 1em;
+        }
+        .grid div:hover{
+            border: 1px solid #f1c40f;
+            background-color: #f0f100;
+        }
+        .grid-anidado{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-auto-rows: 100px;
+            gap: 1em;
+        }
+        .grid-anidado > div{
+            border: 1px solid #0f0;
+            background: green;
+            padding: 2em;
+        }
+        .grid > div{
+            background: #ecf0f1;
+            padding: 1em;
+        }
+        .grid > div:hover{
+            border: 1px solid #f1c40f;
+            background-color: #f0f100;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <div>
+            Elemento 1
+        </div>
+        <div class="grid-anidado">
+            <div>
+                Elemento 2-1
+            </div>
+            <div>
+                Elemento 2-2
+            </div>
+            <div>
+                Elemento 2-3
+            </div>
+            <div>
+                Elemento 2-4
+            </div>
+            <div>
+                Elemento 2-5
+            </div>
+            <div>
+                Elemento 2-6
+            </div>
+        </div>
+        <div>
+            Elemento 3
+        </div>
+        <div>
+            Elemento 4
+        </div>
+        <div>
+            Elemento 5
+        </div>
+        <div>
+            Elemento 6
+        </div>
+        <div>
+            Elemento 7
+        </div>
+        <div>
+            Elemento 8
+        </div>
+        <div>
+            Elemento 9
+        </div>
+        <div>
+            Elemento 10
+        </div>
+    </div>
+
+
+
+</body>
+</html>

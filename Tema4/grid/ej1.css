@@ -1,0 +1,34 @@
+#page{
+    display: grid;
+    width: 100%;
+    height: 300px;
+    grid-template-areas: 
+        "head head"
+        "nav main"
+        "nav foot"
+        "foot2 foot2"
+        ;
+    grid-template-rows: 50px 1fr 30px 40px;
+    grid-template-columns: 150px 1fr;
+}
+header{
+    background: blue;
+    grid-area: head;
+
+}
+nav{
+    background: red;
+    grid-area: nav;
+}
+main{
+    background: yellow;
+    grid-area: main;
+}
+footer{
+    background: greenyellow;
+    grid-area: foot;
+}
+div{
+    grid-area: foot2;
+    background-color: aqua;
+}

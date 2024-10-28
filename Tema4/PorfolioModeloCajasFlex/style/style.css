@@ -1,0 +1,48 @@
+hr{
+    margin: 0;
+    padding: 0;
+}
+header{
+    font-style: italic;
+    float: left;
+}
+nav a{
+    text-align: center;
+    display: inline-block;
+    width: 4rem;
+    height: 2rem;
+    padding: 0;
+    margin: 8%;
+}
+nav a:hover{
+    background-color: lightgrey;
+}
+main{
+    display: flex;
+    margin: 2rem;
+}
+aside{
+    display: flex;
+    flex-direction: column;
+}
+.left button{
+    border: 0px;
+    width: 5rem;
+    height: 1.5rem;
+    margin: 0.1rem;
+}
+.left button:hover{
+    background-color: grey;
+}
+.left button:active{
+    background-color: rgb(128,128,128, 0.75);
+}
+section{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+section img{
+    width: 250px;
+    height: 100px;
+}
