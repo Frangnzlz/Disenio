@@ -2,9 +2,11 @@
     width:150px;
 }
 .color{
-    width: 25px;
-    height: 25px;
-    display: inline-block
+    text-align: center;
+    
+    width: 75px;
+    display: inline-block;
+    height: 200px;
 }
 
 
@@ -33,7 +35,7 @@ button:hover,td:hover{
 }
 #Brown_sugar{
     background-color: #B4654A;
-
+    color: white;
 }
 #Cambridge_blue{
     background-color: #77B28C;
@@ -41,10 +43,12 @@ button:hover,td:hover{
 
 #PineGreen{
     background-color: #157A6E;
+    color: white;
 }
 
 #Shamrock_green{
     background-color: #499F68;
+    color: white;
 }
 #hover:hover{
     color : #157A6E

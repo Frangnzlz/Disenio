@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* .jaja {
+        display: none;
+      }
+      .box {
+        background-color: red;
+        height: 100px;
+      }
+      @media all and (min-width: 600px) {
+        .box {
+          background-color: blue;
+        }
+        .jaja {
+          display: block;
+        }
+      } */
+      @media screen and (max-width: 1200px) and (min-width: 901px) {
+        .priority-5{
+          display: none;
+        }
+      }
+      @media screen and (max-width: 900px) and (min-width: 700px) {
+        .priority-5 {
+          display: none;
+        }
+        .priority-4{
+          display: none;
+        }
+      }
+      @media screen and (max-width: 699px){
+        .priority-5 {
+          display: none;
+        }
+        .priority-4{
+          display: none;
+        }
+        .priority-3{
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <div class="box">Hola</div>
+    <div class="jaja">Ahora se ve</div> -->
+
+    <table id="contact-detail" class="tutorial-table">
+      <thead>
+        <tr>
+          <th class="priority-1">1</th>
+          <th class="priority-2">2</th>
+          <th class="priority-3">3</th>
+          <th class="priority-4">4</th>
+          <th class="priority-5">5</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td class="priority-1">1</td>
+          <td class="priority-2">2</td>
+          <td class="priority-3">3</td>
+          <td class="priority-4">4</td>
+          <td class="priority-5">5</td>
+        </tr>
+        <tr>
+          <td class="priority-1">1</td>
+          <td class="priority-2">2</td>
+          <td class="priority-3">3</td>
+          <td class="priority-4">4</td>
+          <td class="priority-5">5</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
