@@ -30,7 +30,6 @@ header .logo{
     right: 0.6em;
 }
 .carrito a:hover{
-
     color: crimson;
 }
 .carrito a:visited, .carrito a{
@@ -42,7 +41,7 @@ header .buscador{
     margin: auto;
 }
 header .buscador input{
-    width: 30em;
+    width: 45em;
     border-top-left-radius:10px ;
     border-bottom-left-radius:10px ;
 }
@@ -59,4 +58,52 @@ header .buscador button i{
 header .buscador button:hover{
     color: red;
     background-color: white;
+}
+nav a, nav a:visited{
+    margin: auto;
+    text-decoration: none;
+    color: black;
+
+}
+nav a:hover{
+    color: red;
+}
+
+nav{
+    display: flex;
+    width: 100%;
+    height: 3em;
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(128,128,128,1) 100%);
+    ;
+}
+
+
+
+
+.categorias{
+    display: flex;
+}
+.categorias div{
+    margin: auto;
+}
+
+
+
+
+@media screen and (min-width: 651px) and(max-width: 1000px) {
+    header .buscador input{
+        width: 30em;
+        border-top-left-radius:10px ;
+        border-bottom-left-radius:10px ;
+    }
+}
+@media screen and (max-width: 650px) {
+    .categorias{
+        flex-direction: column;
+    }
+    header .buscador input{
+        width: 15em;
+        border-top-left-radius:10px ;
+        border-bottom-left-radius:10px ;
+    }
 }
