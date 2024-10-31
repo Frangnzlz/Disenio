@@ -1,130 +1,171 @@
-body{
-    margin: 0;
-    pad: 0;
+@font-face {
+  font-family: "Afacad";
+  src: url(../fuentes/AfacadFlux-VariableFont_slnt\wght.ttf);
 }
-header{
-    display: flex;
-    width: 100%;
-    background-color: grey;
-}
-header .logo{
-    width: 75px;
+* {
+  font-family: "Afacad", arial, "Times New Roman";
 }
 
-.carrito{
-    display: flex;
-    font-size: 2em;
-    color: black;
-    align-items: center;
+body {
+  margin: 0;
+  pad: 0;
+}
+header {
+  display: flex;
+  width: 100%;
+  background-color: grey;
+}
+header .logo {
+  width: 75px;
 }
 
-.contador{
-    font-size: 10pt;
-    background-color: rgb(255, 0, 0, 0.75);
-    height: 1em;
-    width: 1em;
-    border-radius: 100%;
-    text-align: center;
-    position: relative;
-    bottom: 1em;
-    right: 0.6em;
-}
-.carrito a:hover{
-    color: crimson;
-}
-.carrito a:visited, .carrito a{
-    color: black;
-}
-header .buscador{
-    display: flex;
-    border-collapse: collapse;
-    margin: auto;
-}
-header .buscador input{
-    width: 45em;
-    border-top-left-radius:10px ;
-    border-bottom-left-radius:10px ;
-}
-header .buscador button{
-    height: 3em;
-    width: 3em;
-    border-top-right-radius:10px ;
-    border-bottom-right-radius:10px ;
-    background-color: red
-}
-header .buscador button i{
-    font-size: 2em;
-}
-header .buscador button:hover{
-    color: red;
-    background-color: white;
-}
-nav a, nav a:visited{
-    margin: auto;
-    text-decoration: none;
-    color: black;
-
-}
-nav a:hover{
-    color: red;
+.carrito {
+  display: flex;
+  font-size: 2em;
+  color: black;
+  align-items: center;
 }
 
-nav{
-    display: flex;
-    width: 100%;
-    height: 3em;
-    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(128,128,128,1) 100%);
-    ;
+.contador {
+  font-size: 10pt;
+  background-color: rgb(255, 0, 0, 0.75);
+  height: 1em;
+  width: 1em;
+  border-radius: 100%;
+  text-align: center;
+  position: relative;
+  bottom: 1em;
+  right: 0.6em;
+}
+.carrito a:hover {
+  color: crimson;
+}
+.carrito a:visited,
+.carrito a {
+  color: black;
+}
+header .buscador {
+  display: flex;
+  border-collapse: collapse;
+  margin: auto;
+}
+header .buscador input {
+  width: 45em;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+header .buscador button {
+  height: 3em;
+  width: 3em;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: red;
+}
+header .buscador button i {
+  font-size: 2em;
+}
+header .buscador button:hover {
+  color: red;
+  background-color: white;
+}
+nav a,
+nav a:visited {
+  margin: auto;
+  text-decoration: none;
+  color: black;
+}
+nav a:hover {
+  color: red;
 }
 
-
-
-
-.categorias{
-    margin-top: 30px;
-    display: flex;
-    flex-wrap: wrap;
-    text-align: center;
-}
-.categorias div{
-    margin: auto;
+nav {
+  display: flex;
+  width: 100%;
+  height: 3em;
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(128, 128, 128, 1) 100%
+  );
 }
 
-.categorias img{
-    width: 250px;
-    height: 250px;
-    transition: all ease 0.5s;
-    -webkit-transition: all ease 0.5s;
-    -moz-transition: all ease 0.5s;
-    -ms-transition: all ease 0.5s;
-    -o-transition: all ease 0.5s;
+.categorias {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
 }
-.categorias   img:hover{
-    width: 400px;
-    height: 400px;
+.categorias div {
+  margin: auto;
 }
-.categorias a, .categorias a:visited{
-    color: black;
-    text-decoration: none;
+h1 {
+  text-align: center;
 }
-.categorias a:hover{
-    color: red;
+.categorias img {
+  width: 250px;
+  height: 250px;
+  transition: all ease 0.5s;
+  -webkit-transition: all ease 0.5s;
+  -moz-transition: all ease 0.5s;
+  -ms-transition: all ease 0.5s;
+  -o-transition: all ease 0.5s;
+}
+.categorias img:hover {
+  width: 400px;
+  height: 400px;
+}
+.categorias a,
+.categorias a:visited {
+  color: black;
+  text-decoration: none;
+}
+.categorias a:hover,
+#elegido {
+  color: red;
 }
 
+.productos {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.productos div {
+  margin: auto;
+}
+.productos img {
+  width: 250px;
+  height: 250px;
+  transition: all ease 0.5s;
+  -webkit-transition: all ease 0.5s;
+  -moz-transition: all ease 0.5s;
+  -ms-transition: all ease 0.5s;
+  -o-transition: all ease 0.5s;
+}
+
+.productos img:hover {
+  width: 300px;
+  height: 300px;
+}
+.productos a,
+.productos a:visited {
+  color: black;
+  text-decoration: none;
+}
+.productos a:hover {
+  color: red;
+}
 
 @media screen and (min-width: 801px) and(max-width: 1000px) {
-    header .buscador input{
-        width: 30em;
-        border-top-left-radius:10px ;
-        border-bottom-left-radius:10px ;
-    }
+  header .buscador input {
+    width: 30em;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
 }
 @media screen and (max-width: 800px) {
-
-    header .buscador input{
-        width: 15em;
-        border-top-left-radius:10px ;
-        border-bottom-left-radius:10px ;
-    }
+  header .buscador input {
+    width: 15em;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
 }
-
