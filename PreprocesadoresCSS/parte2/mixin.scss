@@ -1,0 +1,50 @@
+@mixin big-blue-text{
+    font-family: Arial;
+    font-size: 25px;
+    font-weight: bold;
+    color:#0000ff
+}
+
+h1{
+    @include big-blue-text();
+}
+
+p{
+    @extend h1
+}
+
+a{
+    color: #0000ff;
+    a:visited{
+        color: #f00;
+    }
+    
+    a:hover{
+        color: #551a8b;
+    }
+}
+
+.example{
+    font: {
+        family: serif;
+        style: normal;
+        size: medium;
+    }
+}
+
+$color-1: #ffff00;
+$color-2: #0000ff;
+
+body{
+    background-color: mix($color-1, $color-2, 30%);
+}
+
+$column-count: 12;
+
+@function column-width($num){
+    @return $num * 100% /$column-count;
+}
+
+.thre-columns{
+    width: column-width(3);
+}

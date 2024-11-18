@@ -1,0 +1,4 @@
+sass styles.scss sstyles.css
+    Genera un archivo styles.css en el mismo directorio
+sass -watch styles.scss styles.css
+    Actualiza automaticamente por guardados
