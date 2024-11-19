@@ -1,0 +1,122 @@
+h1, p {
+  font-family: Arial;
+  font-size: 25px;
+  font-weight: bold;
+  color: #0000ff;
+}
+
+a {
+  color: #0000ff;
+}
+a a:visited {
+  color: #f00;
+}
+a a:hover {
+  color: #551a8b;
+}
+
+.example {
+  font-family: serif;
+  font-style: normal;
+  font-size: medium;
+}
+
+body {
+  background-color: #4d4db3;
+}
+
+.three-columns {
+  width: 25%;
+}
+
+.width-1 {
+  width: 11em;
+}
+
+.width-2 {
+  width: 12em;
+}
+
+.width-3 {
+  width: 13em;
+}
+
+.width-4 {
+  width: 14em;
+}
+
+.height-1 {
+  height: 16em;
+}
+
+.height-2 {
+  height: 17em;
+}
+
+.height-3 {
+  height: 18em;
+}
+
+.height-4 {
+  height: 19em;
+}
+
+.width-1-while {
+  width: 11em;
+}
+
+.width-2-while {
+  width: 12em;
+}
+
+.width-3-while {
+  width: 13em;
+}
+
+.width-4-while {
+  width: 14em;
+}
+
+.height-1-while {
+  height: 16em;
+}
+
+.height-2-while {
+  height: 17em;
+}
+
+.height-3-while {
+  height: 18em;
+}
+
+.height-4-while {
+  height: 19em;
+}
+
+.image-1 {
+  background-image: url("imagen/1.jpg");
+}
+
+.image-2 {
+  background-image: url("imagen/2.jpg");
+}
+
+.image-3 {
+  background-image: url("imagen/3.jpg");
+}
+
+.image-4 {
+  background-image: url("imagen/4.jpg");
+}
+
+.image-5 {
+  background-image: url("imagen/5.jpg");
+}
+
+body {
+  background-color: #fff;
+}
+
+p {
+  background-color: #fff;
+}/*# sourceMappingURL=mixin.css.map */

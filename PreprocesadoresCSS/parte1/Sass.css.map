@@ -1,7 +1,1 @@
-{
-"version": 3,
-"mappings": "AAGA,mBAAmB;EACf,YAAY,EAJT,OAAO;EAKV,KAAK,EAAE,OAAiB;;AAG5B,OAAO;EACH,OAAO,EAAE,GAAS;EAClB,MAAM,EAAE,GAAS;EACjB,YAAY,EAXT,OAAO",
-"sources": ["Sass.sass"],
-"names": [],
-"file": "Sass.css"
-}
+{"version":3,"sources":["Sass.sass","Sass.css"],"names":[],"mappings":"AAGA;EACI,qBAJG;EAKH,cAAA;ACFJ;;ADKA;EACI,YAAA;EACA,WAAA;EACA,qBAXG;ACSP","file":"Sass.css"}
