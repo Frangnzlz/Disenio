@@ -169,4 +169,42 @@ h1 {
   width: 75px;
   height: 75px; }
 
-/*# sourceMappingURL=style.css.map */
+table {
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse; }
+
+table tr th input,
+table tr th select {
+  width: 100%; }
+
+table img {
+  width: 16px;
+  height: 16px; }
+
+table tr:nth-child(odd) {
+  background-color: #ff000066; }
+
+table tr:nth-child(even) {
+  background-color: #3a3d3b33; }
+
+@media screen and (max-width: 1750px) and (min-width: 1250px) {
+  .estado {
+    display: none; } }
+@media screen and (max-width: 1249px) and (min-width: 750px) {
+  .estado {
+    display: none; }
+
+  .telefono {
+    display: none; } }
+@media screen and (max-width: 749px) {
+  .estado {
+    display: none; }
+
+  .telefono {
+    display: none; }
+
+  .producto {
+    display: none; } }
+
+/*# sourceMappingURL=pedidos.css.map */

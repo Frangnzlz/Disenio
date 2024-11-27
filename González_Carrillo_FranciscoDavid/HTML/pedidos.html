@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="shortcut icon" href="../image/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="../CSS/style.css" />
+    <link rel="stylesheet" href="../CSS/pedidos.css" />
+  </head>
+  <body>
+    <header class="bg-secundario-auxiliar">
+      <img class="logo" src="../image/logo.png" alt="" />
+    </header>
+    <nav class="navegador">
+      <a href="#" class="enlace">Clientes</a>
+      <a href="#" class="enlace">Proveedores</a>
+      <a href="#" class="enlace">Pedidos</a>
+      <a href="#" class="enlace">Cerrar Sesión</a>
+    </nav>
+    <h1>pedidos</h1>
+    <hr />
+    <div class="botones">
+      <button>Crear petición</button>
+      <button>Buscador avanzado</button>
+      <button>Exportar XLS</button>
+    </div>
+    <div class="form">
+      <form action="get" name="form">
+        <table>
+          <tr>
+            <th>ID</th>
+            <th class="producto">ID producto</th>
+            <th class="telefono">Telefono1</th>
+            <th>Email</th>
+            <th class="estado">estado</th>
+          </tr>
+          <tr>
+            <th><input type="text" name="form" /></th>
+            <th class="producto"><input type="text" name="form" /></th>
+            <th class="telefono"><input type="number" name="form" /></th>
+            <th><input type="email" name="form" /></th>
+            <th class="estado">
+              <select name="Cliente">
+                <option value="none" selected disabled></option>
+                <option value="enviado">Enviado</option>
+                <option value="entregado">Entregado</option>
+                <option value="cancelado">Cancelado</option>
+              </select>
+            </th>
+            <th>Ver Pedido</th>
+            <th>Modificar Pedido</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td class="producto">123</td>
+            <td class="telefono">32031</td>
+            <td>correo@correo.com</td>
+            <td class="estado">Enviado</td>
+            <td>
+              <button id="ampliar">
+                <img
+                  src="../image/img_AmpliarInfo.png"
+                  alt="Ampliar informacion"
+                />
+              </button>
+            </td>
+            <td>
+              <button id="modificar">
+                <img
+                  src="../image/img_Modificar.png"
+                  alt="Modificar informacion"
+                />
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td class="producto">132</td>
+            <td class="telefono">32042</td>
+            <td>correo@correo.com</td>
+            <td class="estado">Entregado</td>
+            <td>
+              <button id="ampliar">
+                <img
+                  src="../image/img_AmpliarInfo.png"
+                  alt="Ampliar informacion"
+                />
+              </button>
+            </td>
+            <td>
+              <button id="modificar">
+                <img
+                  src="../image/img_Modificar.png"
+                  alt="Modificar informacion"
+                />
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td class="producto">1252</td>
+            <td class="telefono">32053</td>
+            <td>correo@correo.com</td>
+            <td class="estado">Cancelado</td>
+            <td>
+              <button id="ampliar">
+                <img
+                  src="../image/img_AmpliarInfo.png"
+                  alt="Ampliar informacion"
+                />
+              </button>
+            </td>
+            <td>
+              <button id="modificar">
+                <img
+                  src="../image/img_Modificar.png"
+                  alt="Modificar informacion"
+                />
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td class="producto">1235</td>
+            <td class="telefono">32014</td>
+            <td>correo@correo.com</td>
+            <td class="estado">Enviado</td>
+            <td>
+              <button id="ampliar">
+                <img
+                  src="../image/img_AmpliarInfo.png"
+                  alt="Ampliar informacion"
+                />
+              </button>
+            </td>
+            <td>
+              <button id="modificar">
+                <img
+                  src="../image/img_Modificar.png"
+                  alt="Modificar informacion"
+                />
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td class="producto">12321</td>
+            <td class="telefono">32065</td>
+            <td>correo@correo.com</td>
+            <td class="estado">Entregado</td>
+            <td>
+              <button id="ampliar">
+                <img
+                  src="../image/img_AmpliarInfo.png"
+                  alt="Ampliar informacion"
+                />
+              </button>
+            </td>
+            <td>
+              <button id="modificar">
+                <img
+                  src="../image/img_Modificar.png"
+                  alt="Modificar informacion"
+                />
+              </button>
+            </td>
+          </tr>
+        </table>
+      </form>
+    </div>
+  </body>
+</html>

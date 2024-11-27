@@ -108,7 +108,20 @@ body{
     margin: 0;
 
 }
-header .buscador{
+header {
+    button{
+        border-top-right-radius: 10px;
+        margin: 0;
+        padding: 0;
+        border-bottom-right-radius: 10px;
+        height: 3em;
+        width: 3em;
+        i{
+            font-size: $tamañoFuente * 2;
+        }
+    }
+    
+    .buscador{
     grid-column: 3/11;
     border-collapse: collapse;
     display : flex;
@@ -122,24 +135,16 @@ header .buscador{
         border-bottom-left-radius: 10px;
         height: 3em;
     }
-    button{
-        @extend .bg-principal;
-        border-top-right-radius: 10px;
-        margin: 0;
-        padding: 0;
-        border-bottom-right-radius: 10px;
-        height: 3em;
-        width: 3em;
-        i{
-            font-size: $tamañoFuente * 2;
-        }
-    }
-    button:hover{
-        @extend .bg-white;
-        @extend .color-principal;
     }
 }
+button{
+    @extend .bg-principal;
 
+}
+button:hover{
+    @extend .bg-white;
+    @extend .color-principal;
+}
 .carrito {
     grid-column: 12 / 12;
     display: flex;
