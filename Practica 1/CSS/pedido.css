@@ -16,10 +16,10 @@ table tr th select {
 }
 
 table tr:nth-child(odd) {
-  background-color: rgba(255, 0, 0, 0.4);
+  background-color: #ff000066;
 }
 table tr:nth-child(even) {
-  background-color: rgba(58, 61, 59, 0.2);
+  background-color: #3a3d3b33;
 }
 
 @media screen and (max-width: 1750px) and (min-width: 1250px) {
