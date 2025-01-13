@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../../Jquery/jquery-3.7.1.min.js"></script>
+    <style>
+        .destacado{color: red; font-weight: bold;}
+    </style>
+
+</head>
+<body>
+    <h1 id="titulo-principal">Bienvenidos</h1>
+    <p class="info">parrafo</p>
+
+    <ul id="miLista">
+        <li class="item" data-custom="1">Elemento 1</li>
+        <li class="item" data-custom="2">Elemento 2</li>
+        <li class="item">Elemento 3</li>
+    </ul>
+    <input type="text" name="usuario" value="nombre de usuario">
+    <input type="checkbox" checked="checked">
+    <a href="#" title="enlace a ningun lado">Haz click aqui</a>
+    <br>
+    <script>
+        $(document).ready(function(){
+            //Basicos
+            $("h1").css("color" , "blue");
+            $("#titulo-principal").css("font-size", "2rem");
+            $(".info").css("background-color", "yellow");
+            $("[title]").css("text-decoration", "overline");
+            $("input[name='usuario']").val("Nuevo usuario");
+            //Posicion 
+            $("ul li:first").css("font-style", "italic");
+            $("ul li:last").css("font-style", "italic");
+            $("ul li:eq(1)").css("text-transform", "uppercase");
+            //Avanzados
+            $("li:even").css("background-color", "red");
+            $("li:odd").css("background-color", "blue");
+            $("*.item:not(.destacado)").css("color", "grey");
+            //Combinadores
+            $("ul > li").css("padding", "5px");
+            $("p + ul").css("border", "1px solid black");
+            $("h1, .info").css("margin-bottom", "20px");
+            //Pseudo-clases
+            $(":checked").css("outline", "2px solid red");
+            $(":input").css("margin", "10px 0");
+        })
+    </script>
+
+</body>
+</html>

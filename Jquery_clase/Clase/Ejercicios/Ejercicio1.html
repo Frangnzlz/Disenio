@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../../Jquery/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <h1>TITULO</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos pariatur alias qui facilis voluptate excepturi, consectetur ratione ducimus corrupti perspiciatis enim, exercitationem autem odit modi delectus, est eum suscipit? Asperiores.</p>
+
+<button onclick="aumentar()">aumentar</button>
+<button onclick="disminuir()">disminuir</button>
+<button onclick="izquierda()">izquierda</button>
+<button onclick="derecha()">derecha</button>
+<button onclick="cambiarColor()">cambiar color</button>
+    <script>
+        function aumentar(){
+            let fuente = $("h1").css("font-size");
+
+            fuente = parseInt(fuente) + 1;
+
+            $("h1").css("font-size", fuente);
+            fuente = $("p").css("font-size");
+
+            fuente = parseInt(fuente) + 1;
+
+            $("p").css("font-size", fuente);
+        }
+        function disminuir(){
+            let fuente = $("h1").css("font-size");
+
+            fuente = parseInt(fuente) - 1;
+
+            $("h1").css("font-size", fuente);
+            fuente = $("p").css("font-size");
+
+            fuente = parseInt(fuente) - 1;
+
+            $("p").css("font-size", fuente);
+        }
+        function izquierda(){
+            let margin = $("p").css("margin-right");
+
+            margin = parseInt(margin) + 10;
+
+            $("p").css("margin-right", margin);
+
+            margin = $("p").css("margin-left");
+
+            margin = parseInt(margin) - 10;
+
+            $("p").css("margin-left", margin);
+        }
+        function derecha(){
+            let margin = $("p").css("margin-left");
+
+            margin = parseInt(margin) + 10;
+
+            $("p").css("margin-left", margin);
+
+            margin = $("p").css("margin-right");
+
+            margin = parseInt(margin) - 10;
+
+            $("p").css("margin-right", margin);
+        }
+
+        function cambiarColor(){
+            let color = $("h1").css("background-color");
+            let colores = ["rgb(255,0,0)", "rgb(255,255,0)", "rgb(0,0,255)"]
+            console.log(color)
+
+            let index = colores.indexOf(color) +1;
+            
+            index %=3
+            $("h1").css("background-color", colores[index]);
+
+            
+            
+        }
+        </script>
+
+</body>
+</html>

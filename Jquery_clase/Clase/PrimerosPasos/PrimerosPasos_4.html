@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../../Jquery/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <div class="miDiv">¡Hola mundo!</div>
+
+    <button id="miBoton">click</button>
+
+    <script>
+        $(document).ready(function(){
+            $("#miBoton").click(function(){
+                $(".miDiv")
+                 .text("Texto Actualizado")
+                 .css("color", "red")
+                 .slideUp(1000); //Oculta el elemento con un efecto de deslizamiento
+            });
+        });
+    </script>
+</body>
+</html>

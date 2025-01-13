@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../../Jquery/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <div style="width: 300px; height: 150px;  background-color: black;"></div>
+
+    <button onclick="aumentar()">aumentar</button>
+    <button onclick="desplazar()">Desplazar</button>
+    <script>
+        function aumentar(){
+            let ancho = $("div").css("width");
+            let alto = $("div").css("height");
+
+            ancho = parseInt(ancho) + 10;
+            alto = parseInt(alto) + 10;
+            $("div").css("width" , ancho)
+            $("div").css("height" , alto)
+
+        }
+        function desplazar(){
+            let derecha = $("div").css("margin-left");
+            let  abajo= $("div").css("margin-top");
+            
+            derecha = parseInt(derecha) + 10;
+            abajo = parseInt(abajo) +10;
+            
+            $("div").css("margin-left", derecha);
+            $("div").css("margin-top", abajo);
+
+
+        }
+    </script>
+</body>
+</html>

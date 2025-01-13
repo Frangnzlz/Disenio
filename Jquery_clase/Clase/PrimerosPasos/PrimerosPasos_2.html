@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../../Jquery/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <h1>¡hola, mundo!</h1>
+    <p id="texto">Este es un texto que cambiará al hacer click en el botón</p>
+    <button id="boton">Haz clic aqui</button>
+
+    <script>
+        $(document).ready(function(){
+            //Evento al hacer click en el botón
+            $("#boton").click(function(){
+                //Cambiar el texto del párrafo
+                $("#texto").text("¡El texto ha cambiado!");
+                alert("Se va a ejecutar código jQuery");
+            });
+        });
+    </script>
+</body>
+</html>

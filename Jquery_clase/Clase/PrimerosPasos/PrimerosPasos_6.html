@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../../Jquery/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <a href="https://google.com" id="link">Ir al link</a>
+    <br>
+    <input type="text" name="" id="txtTexto1" value="un valor"><br>
+    <input type="text" name="" id="txtTexto2" value="un valor"><br>
+    <input type="text" name="" id="txtTexto3" value="un valor"><br>
+    <input type="text" name="" id="txtTexto4" value="un valor"><br>
+
+    <div id="contenido">
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+        </ul>
+    </div>
+
+    <script>
+        $(document).ready(function (){
+            // alert($("#link").prop("href"));
+            $("#link").prop("href", "https://medac.es");
+            // alert($("#link").prop("href"));
+            $("input").prop("value", "valor a todos los input")
+
+            obtenemosHTML = $("#contenido").html();
+            console.log(typeof(obtenemosHTML));
+
+            // alert(obtenemosHTML);
+        });
+    </script>
+</body>
+</html>
