@@ -10,11 +10,13 @@
     <h1>TITULO</h1>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos pariatur alias qui facilis voluptate excepturi, consectetur ratione ducimus corrupti perspiciatis enim, exercitationem autem odit modi delectus, est eum suscipit? Asperiores.</p>
 
-<button onclick="aumentar()">aumentar</button>
-<button onclick="disminuir()">disminuir</button>
-<button onclick="izquierda()">izquierda</button>
-<button onclick="derecha()">derecha</button>
-<button onclick="cambiarColor()">cambiar color</button>
+<button onclick="aumentar()">Aumentar</button>
+<button onclick="disminuir()">Disminuir</button>
+<button onclick="izquierda()">Izquierda</button>
+<button onclick="derecha()">Derecha</button>
+<button onclick="cambiarColor()">Cambiar color</button>
+<input type="button" value="Mostrar Color" onclick="mostrarColor()">
+<button onclick="mostrarHTML()">Mostrar HTML</button>
     <script>
         function aumentar(){
             let fuente = $("h1").css("font-size");
@@ -69,17 +71,41 @@
 
         function cambiarColor(){
             let color = $("h1").css("background-color");
-            let colores = ["rgb(255,0,0)", "rgb(255,255,0)", "rgb(0,0,255)"]
+            let colores = ["rgb(255, 0, 0)", "rgb(255, 255, 0)", "rgb(0, 0, 255)"]
             console.log(color)
 
             let index = colores.indexOf(color) +1;
             
             index %=3
-            $("h1").css("background-color", colores[index]);
-
+            $("h1").css("background-color", colores[index]);            
+        }
+        function mostrarColor(){
+            let color = $("h1").css("background-color");
+            let colores = ["rgb(255, 0, 0)", "rgb(255, 255, 0)", "rgb(0, 0, 255)"]      
             
+            let index = colores.indexOf(color);
+            
+            switch(index){
+                case 0:
+                    $("input").val("Rojo");
+                    break;
+                case 1:
+                    $("input").val("Amarillo");
+                    break;
+                case 2:
+                    $("input").val("Azul");
+                    break;
+                default:
+                    $("input").val("Blanco");
+
+            }
             
         }
+
+        function mostrarHTML(){
+            alert($("html").html());
+        }
+
         </script>
 
 </body>
