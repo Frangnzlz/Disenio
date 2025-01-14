@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="../../Jquery/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+    <button id="boton1" disabled>Boton deshabiltado</button>
+    <button id="boton2" >Habilitar</button>
+    <br>
+    <input type="checkbox" checked>
+    <button id="check"> desmarcar checkbox</button>
+    <br>
+    <img src="../../../Practica Clase/imagenes/img_Logo.png" title="Imagen" style="width: 200px;">
+    <button id="imagen">cambiar titulo</button>
+    <script>
+        $(document).ready(function(){
+            $("#boton2").click(function(){
+                $("#boton1").removeAttr("disabled");
+                $("#boton1").text("Boton habilitado");
+            });
+
+            $("#check").click(function(){
+                $("input").removeAttr("checked");
+            });
+
+            $("#imagen").click(function(){
+                $("img").attr("title") == "Imagen" ?
+                $("img").attr("title", "Cambiar") : 
+                $("img").attr("title", "Imagen");
+            });
+
+
+        });
+    </script>
+</body>
+</html>

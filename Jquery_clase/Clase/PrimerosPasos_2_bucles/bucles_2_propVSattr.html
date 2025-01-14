@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="../../Jquery/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+    <input type="text" name="" id="" value="1">
+    <input type="checkbox" name="" id="myCheckbox" checked>
+    <input type="button" value="prueba attr(sumo 1)" id="attr">
+    <input type="button" value="Prueba prop (resto 1)" id="prop">
+
+    <script>
+        $(document).ready(function(){
+            $("#attr").click(pruebaattr);
+            $("#prop").click(pruebaprop);
+
+            function pruebaattr(){
+                alert($("#myCheckbox").attr("checked"));
+                $("#myCheckbox").attr("checked", false);
+
+                let value = $("input[type='text']").attr("value");
+                $("input[type='text']").attr("value", parseInt(value) + 1);
+            }
+            
+            function pruebaprop(){
+                alert($("#myCheckbox").prop("checked"));
+                $("#myCheckbox").prop("checked", false);
+
+                let value = $("input[type='text']").prop("value");
+                $("input[type='text']").prop("value", parseInt(value) - 1);
+            }
+
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="../../Jquery/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+    <form action="">
+        <select id="select">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+
+        <input type="button" value="1">
+        <input type="button" value="2">
+        
+    </form>
+
+    <script>
+        $(document).ready(function(){
+            $("#select").change(cambio);
+            $("input[ type = 'button']").click(mostrarPulsado);
+            $("body").append("<ul>");
+            function cambio(){
+                $("body").append($("<p>", { 'text' : ` seleccion: ${$(this).prop("value")}`}))
+            }
+            
+            function mostrarPulsado(){
+                let value = $(this).prop("value")
+                
+                value == 1 ? 
+                    $("ul").append($("<li>", {'text' : ` boton: ${value}`}))
+                    :
+                    $("ul").prepend($("<li>", {'text' : ` boton: ${value}`}) );
+            }
+
+        });
+    </script>
+</body>
+</html>

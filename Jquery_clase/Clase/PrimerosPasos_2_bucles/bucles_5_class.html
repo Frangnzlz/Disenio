@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="../../Jquery/jquery-3.7.1.min.js"></script>
+    <style>
+        .clase{
+            background-color: aquamarine;
+        }
+        .clase2{
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="agregar">Esto es un parrafo</p>
+    <button onclick="agregarClase()">agregarClase</button>
+
+    <p id="eliminar" class="clase">Esto es un parrafo</p>
+    <button onclick="eliminarClase()">eliminarClase</button>
+
+    <p id="alternar">Esto es un parrafo</p>
+    <button onclick="alternarClase()">alternarClase</button>
+
+    <p id="nose">esto es un parrafo</p>
+    <button onclick="noseClase()">alternarClase</button>
+
+    <p id="parrafo">Original</p>
+    <button onclick="antes()">antes</button>
+    <button onclick="despues()">despues</button>
+
+    <p id="borrar">BOrrar</p>
+    <button onclick="borrar()">borrar</button>
+
+    <div>
+        <p>1</p>
+        <p>2</p>
+        <p>3</p>
+        <p>4</p>
+        <p>5</p>
+    </div>
+    <button onclick="vaciar()">vaciar</button>
+    <script>
+        function agregarClase(){
+            $("#agregar").addClass("clase");
+        }
+
+        function eliminarClase(){
+            $("#eliminar").removeClass("clase");
+        }
+
+        function alternarClase(){
+            $("#alternar").toggleClass("clase");
+        }
+
+        function noseClase(){
+            if(!$("#nose").hasClass("clase")){
+                $("#nose").addClass("clase")
+                $("#nose").removeClass("clase2")
+            }else{
+                $("#nose").addClass("clase2")
+                $("#nose").removeClass("clase")
+            }
+        }
+
+        function antes(){
+            $("#parrafo").before("<p> Antes </p>");
+        }
+        function despues(){
+            $("#parrafo").after("<p> Despues </p>");
+        }
+
+        function borrar(){
+            $("#borrar").remove();
+        }
+        function vaciar(){
+            $("div").empty();
+        }
+    </script>
+</body>
+</html>
