@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../../Jquery/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            let array = [1,2,3,4,5,6,7,8,9,0];
+            let capa = $(".resultado")
+            capa.append($("<p>").text(array.filter(num => num > 5).join(", ")));
+            capa.append($("<p>").text(array.find(num => num > 5)));
+            capa.append($("<p>").text(array.map(num => num * 2).join(", ")));
+            
+
+        })
+    </script>
+</head>
+<body>
+    <div class="resultado">
+
+    </div>
+</body>
+</html>
