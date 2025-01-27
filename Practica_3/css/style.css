@@ -1,0 +1,8 @@
+table{
+    table-layout: auto;
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+table td{
+    padding: 5px;
+}
