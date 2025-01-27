@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../../Jquery/jquery-3.7.1.min.js"></script>
+
+    <style>
+        div{
+            display: flex;
+        }
+        .raton{
+            margin: 50px;
+            background-color: aquamarine;
+            border-radius: 5px;
+            width: 250px;
+            height: 250px;
+
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="raton">
+
+        </div>
+        
+        
+        
+    </div>
+    <p id="infoEvento"></p>
+    <p id="posicion"></p>
+    
+    <script>
+        $(".raton").click(function(){
+            $("#infoEvento").text("click")
+        });
+        $(".raton").dblclick( function(){
+            $(this).css("background-color", "red");
+        });
+        // $(".raton").hover( function(e){
+        //     $("#infoEvento").text(e.type)
+        // });
+        $(".raton").mousemove( function(e){
+            $("#posicion").text(`posicion x: ${e.offsetX} posicon y: ${e.offsetY}`)
+        });
+        // $(".raton").mousedown( function(e){
+        //     $("#infoEvento").text(e.type)
+        // });
+        $(".raton").mouseenter( function(e){
+            $("#infoEvento").text(e.type)
+        });
+        $(".raton").mouseleave( function(e){
+            $("#infoEvento").text(e.type)
+        });
+        // $(".raton").mouseup( function(e){
+        //     $("#infoEvento").text(e.type)
+        // });
+
+
+    </script>
+</body>
+</html>

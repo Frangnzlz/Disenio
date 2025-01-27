@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../../Jquery/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <form action="">
+        <h2>Formulario de contacto</h2>
+        <label for="nombre">Nombre </label>
+        <br>
+        <input type="text" name="nombre" id="nombre" placeholder="Introduce su nombre">
+        <br>
+        <label for="correo">Correo electronico</label>
+        <br>
+        <input type="email" name="correo" id="correo" placeholder="Introduce su correo">
+        <br>
+        <label for="asunto">Asunto</label>
+        <br>
+        <select name="asunto" id="asunto">
+            <option disabled selected hidden >Elija un asunto</option>
+            <option value="consulta">consulta</option>
+            <option value="administracion">administracion</option>
+            <option value="otro">otro</option>
+        </select>
+        <br>
+        <label for="mensaje">Mensaje</label>
+        <br>
+        <textarea name="mensaje" id="mensaje"></textarea>
+        <br>
+        <input type="submit" value="Enviar">
+    </form>
+    <p></p>
+    <script>
+        $("form").on("focus", "input", function(){
+            $(this).css("background-color", "red")
+        });
+        $("form").on("blur", "input", function(){
+            $(this).css("background-color", "lightgrey")
+        });
+        $("form").on("change", "select", function(){
+            $("p").text(`Asunto modificado a ${$(this).val()}`)
+        });
+        $("form").submit(function(){
+            alert("Enviando formulario")
+        });
+    </script>
+</body>
+</html>

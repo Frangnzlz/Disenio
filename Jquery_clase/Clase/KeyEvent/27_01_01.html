@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../../Jquery/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <h2>Eventos del teclado</h2>
+    <form action="">
+        <label for="nombre">Nombre de usuario</label>
+        <input type="text" name="nombre" id="nombre" placeholder="Escribre tu nombre">
+        <br>
+        <label for="correo">Correo Electronico</label>
+        <input type="email" name="correo" id="correo" placeholder="Escribre tu correo">
+        <br>
+        <input type="submit" value="Enviar">
+    </form>
+
+    <div id="eventos">
+        <h2>Eventos de teclado</h2>
+        <p id="keydown"></p>
+        <p id="keypress"></p>
+        <p id="keyup"></p>
+        <p id="actual"></p>
+        <script>
+            $("input").keydown(function(e){
+                let eventos = $("#eventos")
+                let texto = `Tecla presionada: ${e.key}`
+                let p = $("#keydown")
+                p.text(texto)
+            })
+            $("input").keypress(function(e){
+                let eventos = $("#eventos")
+                let texto = `Caracter generado: ${e.key}`
+                let p = $("#keypress")
+                p.text(texto)
+            })
+            $("input").keyup(function(e){
+                let eventos = $("#eventos")
+                let texto = `Tecla liberada: ${e.key}`
+                let p = $("#keyup")
+                p.text(texto)
+            })
+            $("#nombre, #correo").on("input", function(){
+                $("#actual").text(`Valor actual: ${$(this).val()}` )
+            })
+        </script>
+    </div>
+
+    
+</body>
+</html>
