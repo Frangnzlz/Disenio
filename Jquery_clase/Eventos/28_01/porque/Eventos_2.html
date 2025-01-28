@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <h1>Importante: las funciones load() y unload() requieren de un servidor</h1>
+    <button id="cargar">cargar Contenido</button>
+    <div id="resultado">
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $("#cargar").on("click", function(){
+             $("#resultado").load("http://localhost/porque/ZZZZsupongo.html");       
+            })
+        });
+        $(document).ready(function(){
+            $(window).on("beforeunload", function(){
+                return "¿Estás seguro de que quieres salir de esta pagina?";
+            })
+
+        });
+    </script>
+</body>
+</html>

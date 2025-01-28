@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../../Jquery/jquery-3.7.1.min.js"></script>
+    <style>
+        div{
+            width: 250px;
+            height: 250px;
+            background-color: blue;
+        }
+        .clase{
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <button id="down">down</button>
+    <button id="up">up</button>
+    <button id="toggle">toggle</button>
+
+    <div>
+        Caja
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $("#down").click(function(){
+                $("div").slideDown(500,alerta);
+            });
+            $("#up").click(function(){
+                $("div").slideUp(500,alerta)
+            });
+            $("#toggle").click(function(){
+                $("div").slideToggle(500,alerta)
+            });
+            function alerta(){
+                alert("evento terminado")
+                $("div").toggleClass("clase")
+            }
+        })
+    </script>
+</body>
+</html>

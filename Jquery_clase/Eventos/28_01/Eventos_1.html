@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../../Jquery/jquery-3.7.1.min.js"></script>
+    <style>
+        #scroll{
+            width: 100%;
+            background-color: green;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="scroll">
+        <p>Bienvenido a mi pagina</p>
+    </div>
+    <div id="resize">
+        <p>CAmbiar tamapño y fondo</p>
+    </div>
+
+    <script>
+        $(window).scroll(function(){
+            $("#scroll").css("background-color", "red")
+        });
+        $(window).resize(function(){
+            $("#resize p").css({"font-size" : "50pt", "background-color" : "yellow"})
+        })
+    </script>
+
+</body>
+</html>
