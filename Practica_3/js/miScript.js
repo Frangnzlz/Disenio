@@ -24,4 +24,8 @@ $(document).ready(function () {
         // celdas.remove();
         
     })
+
+    $(".buscador input").on("keypress", function(){
+        
+    })
 });
