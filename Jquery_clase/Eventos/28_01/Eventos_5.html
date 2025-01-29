@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../../Jquery/jquery-3.7.1.min.js"></script>
+    <style>
+        div{
+            width: 250px;
+            height: 250px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <button id="hide">hide</button>
+    <button id="show">show</button>
+    <!-- <button id="toggle">toggle</button> -->
+    <div>
+        <p>Hola mundo</p>
+    </div>
+    <script>
+        $(document).ready(function(){
+            // $("#hide").click(function(){
+            //     $("div").hide(500)
+            //     $("div").fadeOut(500)
+
+            // });
+            // $("#show").click(function(){
+            //     $("div").show(500)
+            //     $("div").fadeIn(500)
+            // });
+            // $("#toggle").click(function(){
+
+            //     $("div").fadeToggle(500)
+            //     $("div").toggle(500)
+            //     $("div").slideToggle(500)
+                
+            // });
+
+            $("#show").click(function(){
+                $("div").fadeIn(500, mostrar)
+            })
+            $("#hide").click(function(){
+                $("div").fadeOut(500, ocultar)
+            })
+            function ocultar(){
+                $("div p").text("Iniciando");
+                $("div").css("background-color", "yellow");
+                
+            }
+            function mostrar(){
+                $("div p").text("Completado");
+                $("div").css("background-color", "red");
+
+            }
+
+        });
+    </script>
+</body>
+</html>

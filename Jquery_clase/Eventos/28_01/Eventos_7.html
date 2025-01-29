@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../../Jquery/jquery-3.7.1.min.js"></script>
+    <style>
+        html , body{
+            height: 10000px;
+        }
+        div{
+            width: 250px;
+            height: 250px;
+            background-color: blue;
+        }
+        .clase{
+            background-color: aqua;
+        }
+        #final{
+            position: absolute;
+            bottom: -9000px;
+        }
+    </style>
+</head>
+<body>
+    <button id="inicio">Ir al final</button>
+    <button id="reemplazar">reemplazar div</button>
+    <div>
+        Caja
+    </div>
+    <button id="final">Ir al principio</button>
+    <script>
+        $(document).ready(function(){
+            $("#inicio").click(function(){
+                let height = $(document).height();
+                $("html, body").animate({scrollTop : height}, 50);
+            })
+            $("#final").click(function(){
+                let height = $(document).height();
+                $("html, body").animate({scrollTop : -height}, 50);
+            })
+            $("#reemplazar").click(function(){
+                $("div").replaceWith($("<p>").text("Cambio"))
+            })
+        })
+    </script>
+</body>
+</html>
