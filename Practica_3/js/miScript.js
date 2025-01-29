@@ -25,7 +25,7 @@ $(document).ready(function () {
         let val = $(this).val()
         //**Por como esta estructuado mi html, necesito buscar el siguiente hermano del padre 
         // del input y saltarme el primer tr que se encuentre */
-        $(this).parent().next().find("tr").not(":first").filter(function(){
+        $(this).closest("section").find("table tr").not(":first").filter(function(){
             // **Comprueba si se encuentra el texto actual del input dentro del listado del campo codigo
             // El campo codigo se trata del primer hijo del registro*/
             let existe = $(this).children().first().text().includes(val);  
@@ -52,4 +52,16 @@ $(document).ready(function () {
             $(td).text(generarCodigos);
         }
     }
+
+    $("#tema").click(function() {
+        $("body").toggleClass("modo-oscuro");
+        $(this).text($("body").hasClass("modo-oscuro") ? "Modo Claro" : "Modo Oscuro");
+    });
+
+    $("#fuente").click(function() {
+        let actual = $("body").css("font-size");
+        let nuevo = actual == "16px" ? "20px" : "16px";
+        $("body").css("font-size", nuevo);
+        $(this).text(nuevo == "20px" ? "Reducir Texto" : "Aumentar Texto");
+    });
 });

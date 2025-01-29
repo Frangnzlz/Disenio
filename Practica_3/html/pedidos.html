@@ -9,13 +9,17 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Productos</a></li>
-            <li><a href="#">Clientes</a></li>
-        </ul>
-    </nav>
+    <header>
+        <a href="../index.html"><img src="../image/logo.png" alt="Logo"></a>
+        <nav>
+            
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Productos</a></li>
+                <li><a href="#">Clientes</a></li>
+            </ul>
+        </nav>
+    </header>
     <div class="contenedor">
         <h1>Panel de Administración de Pedidos</h1>
 
@@ -66,7 +70,7 @@
                     </td>
                 </tr>
             </table>
-            <button>Archivar</button>
+            <button class="archivar">Archivar</button>
         </section>
         <section id="atendido">
             <h2>Atendido</h2>
@@ -112,12 +116,14 @@
                     </td>
                 </tr>
             </table>
-            <button>Archivar</button>
+            <button class="archivar">Archivar</button>
         </section>
     </main>
     
     <footer>
-
+        <button id="tema">Modo Oscuro</button>
+        <button id="fuente">Aumentar Texto</button>
+        <p>&copy; 2025 Tienda Online - Todos los derechos reservados.</p>
     </footer>
 
 </body>

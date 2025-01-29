@@ -1,8 +1,125 @@
-table{
-    table-layout: auto;
-    border: 2px solid black;
-    border-collapse: collapse;
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
 }
-table td{
-    padding: 5px;
+
+header {
+    display: flex;
+    align-items: center;
+    background: #555;
+    padding: 20px;
+}
+
+header img {
+    height: 50px;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    background: #666;
+    overflow: hidden;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    padding: 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #bbb;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: #e0e0e0;
+}
+
+table, th, td {
+    border: 1px solid #888;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background: #444;
+    color: white;
+}
+
+button {
+    padding: 10px 15px;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+button.eliminar {
+    background: #a94442;
+    color: white;
+}
+
+button.eliminar:hover {
+    background: #842029;
+}
+
+button.cambiar {
+    background: #5a6268;
+    color: white;
+}
+
+button.cambiar:hover {
+    background: #343a40;
+}
+
+button.archivar, #tema, #fuente {
+    background: #444;
+    color: white;
+}
+
+button.archivar:hover, #tema:hover, #fuente:hover {
+    background: #222;
+}
+
+.modo-oscuro {
+    background-color: #222;
+    color: #ddd;
+}
+
+.modo-oscuro table {
+    background: #333;
+    color: white;
+}
+
+.modo-oscuro th {
+    background: #111;
+}
+
+.modo-oscuro button.archivar, .modo-oscuro #tema, .modo-oscuro #fuente {
+    background: #111;
+}
+
+.modo-oscuro button.archivar:hover, .modo-oscuro #tema:hover, .modo-oscuro #fuente:hover {
+    background: #000;
 }
