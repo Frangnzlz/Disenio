@@ -5,7 +5,10 @@ body {
     background-color: #f0f0f0;
     color: #333;
 }
-
+table img{
+    width: 100px;
+    height: 100px;
+}
 header {
     display: flex;
     align-items: center;
