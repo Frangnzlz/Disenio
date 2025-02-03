@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../../Jquery/jquery-3.7.1.min.js"></script>
+    <style>
+        div{
+            width: 100px;
+            height: 75px;
+            background-color: blue;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <p>0</p>
+    <div>
+
+    </div>
+    <script>
+        $(document).ready(function(){
+            let cont = 0;
+            $("div").mouseenter(function(){
+                $(this).animate({
+                    width: "80px",
+                    height: "150px",
+                    opacity: "0.4",
+                    left: "100px"
+                }, 100, function(){
+                    $("p").text("entra")
+                })
+            });
+            $("div").mouseleave(function(){
+                cont++;
+                $(this).animate({
+                    width: "100px",
+                    height: "75px",
+                    opacity: "1",
+                    left: "0"
+                }, 100, function(){
+                    $("p").text("sale")
+                })
+            });
+        });
+    </script>
+</body>
+</html>

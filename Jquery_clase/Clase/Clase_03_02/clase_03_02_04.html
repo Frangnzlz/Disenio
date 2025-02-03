@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../../Jquery/jquery-3.7.1.min.js"></script>
+    
+</head>
+<body>
+    <button id="añadir">Añadir</button>
+    <br>
+    <div id="objetivo" style="background-color: grey; border: 2px dotted black;">
+        soy una caja
+    </div>
+    <br>
+
+    <button id="toggle">toggle</button>
+    <button id="animame">amimame</button>
+
+    <script>
+        $(document).ready(function(){
+            let caja = $("#objetivo")
+            $("#añadir").click(function(){  
+
+                if($(this).text() == "Añadir"){
+                    $(caja).animate({
+                        opacity : 0.4,
+                    }, 250,function(){
+                        $(this).fadeOut()
+                    })
+                    $(this).text("Mostrar")
+
+                }else{
+                    $(this).text("Añadir")
+                    $(caja).animate({
+                        opacity : 1
+                    }, 250,function(){
+                        $(this).fadeIn()
+                    })
+                }
+            })
+            $("#toggle").click(function(){
+                
+            })
+        });
+    </script>
+
+
+</body>
+</html>

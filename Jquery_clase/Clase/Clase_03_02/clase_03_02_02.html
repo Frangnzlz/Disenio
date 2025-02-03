@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../../Jquery/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <ul>
+        <li data-id="1">seccion 1</li>
+        <li data-id="2">seccion 2</li>
+        <li data-id="3">seccion 3</li>
+    </ul>
+
+    <div id="1" style="border: 1px solid black; height : 500px; width: 500px; margin: 50px;"></div>
+    <div id="2" style="border: 1px solid black; height : 500px; width: 500px; margin: 50px;"></div>
+    <div id="3" style="border: 1px solid black; height : 500px; width: 500px; margin: 50px;"></div>
+    
+    <script>
+        $(document).ready(function(){
+            $("ul li").click(function(){
+                let section = $(`#${$(this).attr("data-id")}`)
+                let posicion = $(section).offset().top;
+
+                $("html, body").animate(
+                    {scrollTop : posicion},
+                    500
+                )
+                section.text(`Posicion: ${posicion}`)
+            })
+        });
+    </script>
+
+</body>
+</html>

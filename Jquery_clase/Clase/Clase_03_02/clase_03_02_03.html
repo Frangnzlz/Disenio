@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../../Jquery/jquery-3.7.1.min.js"></script>
+    <style>
+        div{
+            position: relative;
+            width: 250px;
+            height: 250px;
+        }
+    </style>
+</head>
+<body>
+    <div style="background-color: blue;" id="primero"></div>
+    <div style="background-color: red;" id="segundo"></div>
+
+    <script>
+        $(document).ready(function(){
+            $("#primero").click(function(){
+                let ancho = $("#segundo").width()
+                let alto = $("#segundo").height()
+
+                $(this).animate({
+                    left : ancho
+                }, 500)
+                $(this).animate({
+                    top : alto
+                }, 500)
+            })
+            $("#segundo").click(function(){
+                let ancho = $(this).width()
+                let alto = $(this).height()
+                let topPrimero = $("#primero").offset().top
+                let leftPrimero = $("#primero").offset().left 
+
+
+                $(this).animate({
+                    width : 2*ancho,
+                    height : 2*alto,
+                    top : topPrimero-8,
+                    left: leftPrimero-8
+                })
+            })
+    
+        });
+    </script>
+</body>
+</html>
