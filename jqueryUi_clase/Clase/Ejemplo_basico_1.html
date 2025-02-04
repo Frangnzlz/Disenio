@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="../jquery/jquery-3.7.1.min.js"></script>
+    <script src="../jquery/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="../jquery/jquery-ui.min.css" />
+    <style></style>
+  </head>
+  <body>
+    <h2>Ejemplos basicos jquery-ui</h2>
+
+    <div id="accordion">
+      <h3>Section 1</h3>
+      <div>
+        <p>
+          Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam.
+          Integer ut neque. Vivamus nisi metus, molestie vel, gravida in,
+          condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi.
+          Proin viverra leo ut odio. Curabitur malesuada. Vestibulum a velit eu
+          ante scelerisque vulputate.
+        </p>
+      </div>
+      <h3>Section 2</h3>
+      <div>
+        <p>
+          Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
+          purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis
+          porttitor velit, faucibus interdum tellus libero ac justo. Vivamus non
+          quam. In suscipit faucibus urna.
+        </p>
+      </div>
+      <h3>Section 3</h3>
+      <div>
+        <p>
+          Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque
+          lobortis. Phasellus pellentesque purus in massa. Aenean in pede.
+          Phasellus ac libero ac tellus pellentesque semper. Sed ac felis. Sed
+          commodo, magna quis lacinia ornare, quam ante aliquam nisi, eu iaculis
+          leo purus venenatis dui.
+        </p>
+        <ul>
+          <li>List item one</li>
+          <li>List item two</li>
+          <li>List item three</li>
+        </ul>
+      </div>
+      <h3>Section 4</h3>
+      <div>
+        <p>
+          Cras dictum. Pellentesque habitant morbi tristique senectus et netus
+          et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
+          faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
+          mauris vel est.
+        </p>
+        <p>
+          Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat
+          lectus. Class aptent taciti sociosqu ad litora torquent per conubia
+          nostra, per inceptos himenaeos.
+        </p>
+      </div>
+    </div>
+
+    <div class="ui-widget-content ui-widget">
+      <label for="auto">Lenguajes: </label>
+      <input id="auto" />
+      <br>
+      <label for="nombre">Nombre</label>
+      <input type="text" name="nombre" id="nombre" placeholder="Introduce tu nombre">
+      <br>
+      Selecciona una fecha:
+      <input type="text" id="fecha" />
+      <div id="barra"></div>
+      <p id="progreso"></p>
+      <input type="button" id="enviar" value="enviar">
+    </div>
+    <div id="faltan">
+      <p>Faltan cosas</p>
+    </div>
+    <div id="completo">
+      <p>Entrada completa</p>
+    </div>
+    <script>
+      $(function () {
+        $("#fecha").datepicker();
+        $("#barra").slider({
+          min: 1,
+          max: 100,
+          slide: function (event, ui) {
+            $("#progreso").text("Posicion " + ui.value);
+          },
+        });
+        $("#accordion").accordion({
+          collapsible: true,
+        });
+
+        var availableTags = [
+          "ActionScript",
+          "AppleScript",
+          "Asp",
+          "BASIC",
+          "C",
+          "C++",
+          "Clojure",
+          "COBOL",
+          "ColdFusion",
+          "Erlang",
+          "Fortran",
+          "Groovy",
+          "Haskell",
+          "Java",
+          "JavaScript",
+          "Lisp",
+          "Perl",
+          "PHP",
+          "Python",
+          "Ruby",
+          "Scala",
+          "Scheme",
+        ];
+        $("#auto").autocomplete({
+          source: availableTags,
+        });
+        $("#faltan").dialog({
+          autoOpen :false
+        })
+        $("#completo").dialog({
+          autoOpen :false
+        })
+        $("#enviar").click(function(){
+          let campo1 = $("#auto").val();
+          let campo2 = $("#nombre").val();
+          let campo3 = $("#fecha").val();
+          let campo4 =  $("#progreso").text()
+          if(campo1 != "" && campo2 != "" && campo3 != "" && campo4 != ""){
+            $("#completo").dialog("open")
+          }else{
+            $("#faltan").dialog("open")
+          }
+        })
+      });
+    </script>
+  </body>
+</html>

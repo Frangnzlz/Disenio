@@ -9,6 +9,7 @@
 </head>
 <body>
     <button id="añadir">Añadir</button>
+    <button id="mostrar">Mostrar</button>
     <br>
     <div id="objetivo" style="background-color: grey; border: 2px dotted black;">
         soy una caja
@@ -21,27 +22,53 @@
     <script>
         $(document).ready(function(){
             let caja = $("#objetivo")
+            $("#mostrar").hide()
+
             $("#añadir").click(function(){  
+                $(this).hide()
+                $("#mostrar").show()
 
-                if($(this).text() == "Añadir"){
-                    $(caja).animate({
-                        opacity : 0.4,
-                    }, 250,function(){
-                        $(this).fadeOut()
-                    })
-                    $(this).text("Mostrar")
+                $(caja).animate({
+                    opacity : 0.4,
+                }, 250,function(){
+                    $(this).fadeOut()
+                })
 
-                }else{
-                    $(this).text("Añadir")
+            })
+            $("#mostrar").click(function(){  
+                $(this).hide()
+                $("#añadir").show()
+
                     $(caja).animate({
                         opacity : 1
                     }, 250,function(){
                         $(this).fadeIn()
                     })
-                }
+
             })
             $("#toggle").click(function(){
-                
+                $(caja).slideToggle();
+            })
+
+            $("#animame").click(function(){
+                caja.animate({
+                    marginLeft: '500px',
+                    fontSize: '40px',
+                    height: '100px'
+                }, 'slow')
+                caja.animate({
+                    borderRadius : '900px',
+                    marginTop : '100px'
+                }, slow)
+                caja.animate({
+                    borderRadius : '0px',
+                    marginLeft : '100px'
+                }, slow)
+                caja.animate({
+                    borderRadius : '100px',
+                    marginTop : '0px'
+                }, slow)
+
             })
         });
     </script>

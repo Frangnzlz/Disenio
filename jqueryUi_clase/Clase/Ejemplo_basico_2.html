@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="../jquery/jquery-3.7.1.min.js"></script>
+    <script src="../jquery/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="../jquery/jquery-ui.min.css" />
+    <style>
+      #draggable {
+        width: 100px;
+        height: 100px;
+        padding: 0.5em;
+        float: left;
+        margin: 10px 10px 10px 0;
+      }
+      #droppable {
+        width: 150px;
+        height: 150px;
+        padding: 0.5em;
+        float: left;
+        margin: 10px;
+      }
+      #resizable {
+        width: 150px;
+        height: 150px;
+        padding: 0.5em;
+      }
+      #resizable h3 {
+        text-align: center;
+        margin: 0;
+      }
+      .dropped {
+        background-color: yellow;
+      }
+      .seleccion {
+        color: blue;
+        text-decoration: underline;
+      }
+      #selecccionable li {
+        margin: 3px;
+        padding: 0.4em;
+        font-size: 1.4em;
+        height: 18px;
+      }
+      #seleccionable .ui-selecting {
+        background: #feca40;
+      }
+      #seleccionable .ui-selected {
+        background: #f39814;
+        color: white;
+      }
+    </style>
+    <script>
+      $(function () {
+        $("#draggable").draggable();
+        $("#droppable").droppable({
+          drop: function (event, ui) {
+            $(this).addClass("dropped").find("p").html("soltado!");
+          },
+        });
+        $("#redimensionable").resizable();
+        $("#ordenable").sortable();
+        $("#seleccionable").selectable();
+      });
+    </script>
+  </head>
+  <body>
+    <div id="redimensionable" class="ui-widget-content">
+      <h3 class="ui-widget-header">redimensionable</h3>
+    </div>
+    <ul id="ordenable">
+      <li>elemento numero 1</li>
+      <li>elemento numero 3</li>
+      <li>elemento numero 2</li>
+      <li>elemento numero 4</li>
+      <li>elemento numero 5</li>
+      <li>elemento numero 6</li>
+      <li>elemento numero 7</li>
+    </ul>
+    <ol id="seleccionable">
+      <li class="ui-widget-content">Item 1</li>
+      <li class="ui-widget-content">Item 2</li>
+      <li class="ui-widget-content">Item 3</li>
+      <li class="ui-widget-content">Item 4</li>
+      <li class="ui-widget-content">Item 5</li>
+      <li class="ui-widget-content">Item 6</li>
+      <li class="ui-widget-content">Item 7</li>
+    </ol>
+    <div id="draggable" class="ui-widget-content">
+      <p>arrastreame</p>
+    </div>
+
+    <div id="droppable" class="ui-widget-header">
+      <p>Sueltame</p>
+    </div>
+  </body>
+</html>
