@@ -1,0 +1,45 @@
+@font-face {
+  font-family: "Afacad";
+  src: url(../fuentes/AfacadFlux-VariableFont_slnt\wght.ttf);
+}
+* {
+  font-family: "Afacad", arial, "Times New Roman";
+  background-color: #808080;
+}
+#logo {
+  width: 150px;
+}
+.color {
+  text-align: center;
+
+  width: 75px;
+  display: inline-block;
+  height: 200px;
+}
+
+p.icons {
+  display: none;
+}
+button:hover,
+td:hover {
+  img#amp {
+    content: url("../assets/img_AmpliarInfo_alt.png");
+  }
+
+  img#mod {
+    content: url("../../assets/img_modificar_alt.png");
+  }
+  button.icons + p.icons {
+    display: inline;
+  }
+}
+
+#red {
+  background-color: #ff0000;
+}
+#grey {
+  background-color: #808080;
+}
+#white {
+  background-color: white;
+}
