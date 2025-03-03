@@ -7,8 +7,11 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="../CSS/style.css">
     <link rel="shortcut icon" href="../image/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../js/jquery-ui.min.css">
     <script src="../js/jquery-3.7.1.min.js"></script>
-    <script src="../js/miScript.js"></script>
+    <script src="../js/jquery-ui.min.js"></script>
+    <script src="../js/blackFriday.js"></script>
+
 </head>
 <body>
     <header>
@@ -27,8 +30,17 @@
         <a href="#">Juegos de mesa</a>
         <a href="#">Rompecabezas</a>
         <a href="#">Maquetas</a>
-        <a href="#" id="form">Recibir ofertas</a>
     </nav>
+    <div class="ui-widget">
+        <label for="inputCategoria">Categorias </label>
+        <input id="inputCategoria">
+      </div>
+      <p>
+  <label for="precio">Rango de precio</label>
+  <input type="text" id="precio" readonly>
+</p>
+ 
+<div id="slider-range"></div>
     <div class="cuerpo">
         <aside>
             <a href="" class="enlace">Puzzles</a>
@@ -37,6 +49,16 @@
             <a href="" class="enlace">Cartas</a>
             <a href="" class="enlace">Maquetas</a>
             <a href="" class="enlace">Infantiles</a>
+            <ul id="menu">
+                <li class="ui-widget-header"><div>Puzzles</div></li>
+                <li><div>250 piezas</div></li>
+                <li><div>500 piezas</div></li>
+                <li><div>750 piezas</div></li>
+                <li class="ui-widget-header"><div>Juegos de tablero</div></li>
+                <li><div>Ingenio</div></li>
+                <li><div>Estrategia</div></li>
+                <li><div>Comedia</div></li>
+              </ul>
         </aside>
             <section class="categorias">
                 <h1>Categorias</h1>
@@ -101,25 +123,5 @@
                 </section>  
                 </div>
     </div>
-    <section id="formulario-ofertas">
-        <p id="mensaje">¡Suscríbete y recibe las mejores ofertas!</p>
-        <form id="ofertas-form">
-            <label for="email">Correo electrónico:</label>
-            <input type="email" id="email" required>
-
-            <label for="pais">País:</label>
-            <select id="pais">
-                <option value="">Selecciona un país</option>
-                <option value="es" data-prefijo="+34">España</option>
-                <option value="mx" data-prefijo="+52">México</option>
-                <option value="ar" data-prefijo="+54">Argentina</option>
-            </select>
-            
-            <label for="telefono">Teléfono:</label>
-            <input type="text" id="telefono" placeholder="Ej: +34 600123456">
-
-            <button type="submit">Suscribirse</button>
-        </form>
-    </section>
 </body>
 </html>

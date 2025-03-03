@@ -1,10 +1,41 @@
-@font-face {
-  font-family: "Afacad";
-  src: url(../fuentes/AfacadFlux-VariableFont_slnt\wght.ttf);
-}
 * {
-  font-family: "Afacad", arial, "Times New Roman";
-}
+  font-family: arial, "Times New Roman";
+  font-size: 1em; }
+
+.bg-principal, button, .contador {
+  background-color: #ff0000; }
+
+.bg-secundario {
+  background-color: #808080; }
+
+.bg-principal-auxiliar {
+  background-color: #ff000066; }
+
+.bg-secundario-auxiliar {
+  background-color: #3a3d3b33; }
+
+.bg-white, button:hover {
+  background-color: white; }
+
+.bg-black {
+  background-color: black; }
+
+.color-white, .contador {
+  color: white; }
+
+.color-black, .carrito a, .carrito:hover .contador, .enlace {
+  color: black; }
+
+.color-principal, button:hover, .carrito:hover a, .enlace:hover {
+  color: #ff0000; }
+
+.titulo {
+  font-weight: bold;
+  font-size: 3em; }
+
+.subtitulo {
+  font-weight: 500;
+  font-size: 2em; }
 
 body {
   margin: 0;
@@ -89,3 +120,78 @@ nav {
   );
 }
 
+.contenedor {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0; }
+
+@media screen and (max-width: 1000px) {
+  div.cuerpo {
+    grid-template-areas: "a c" "b b"; }
+
+  .contenedor {
+    justify-items: center;
+    grid-template-columns: 1fr 1fr; } }
+@media screen and (max-width: 600px) {
+  div.cuerpo {
+    grid-template-areas: "a" "c" "b"; }
+    div.cuerpo img {
+      width: 225px;
+      height: 225px; }
+    div.cuerpo img:hover {
+      width: 250px;
+      height: 250px; }
+
+  .contenedor {
+    grid-template-columns: 1fr;
+    justify-items: center; } }
+.cuerpo {
+  display: grid;
+  grid-template-areas: "a b" "a c"; }
+
+body {
+  padding: 0;
+  margin: 0; }
+
+
+
+.enlace {
+  text-decoration: none; }
+
+.cuerpo img {
+  width: 200px;
+  height: 200px;
+  /* transition: all 0.75s; */
+ }
+/* .cuerpo img:hover {
+  width: 225px;
+  height: 225px; } */
+img {
+  width: 400px;
+  height: 500px; }
+
+aside {
+  grid-area: a;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 0;
+  text-align: center;
+  height: 250px; }
+  aside a {
+    display: block;
+    text-align: center;
+    align-items: center; }
+
+.categorias {
+  grid-area: b; }
+
+.productos {
+  grid-area: c; }
+
+h1 {
+  text-align: center; }
+
+.logo {
+  width: 75px;
+  height: 75px; }
